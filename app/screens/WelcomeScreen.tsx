@@ -21,16 +21,24 @@ export default function WelcomeScreen(props: Props) {
       style={styles.background}
       resizeMode="cover"
     >
-      <View style={styles.overlay}>
+<View style={styles.overlay}>
         <Image
-          source={require('../../assets/images/mee.jpg')} // Replace with your personal image
+          source={require('../../assets/images/mee.jpg')} // Replace with your profile image
           style={styles.profileImage}
         />
         <Text style={styles.title}>Welcome to My App</Text>
+
         <Button
           title="Go to Profile"
           onPress={() => navigation.navigate('Profile')}
         />
+
+        <View style={{ marginTop: 10 }}>
+          <Button
+            title="Go to Map"
+            onPress={() => navigation.navigate('Map')}
+          />
+        </View>
       </View>
     </ImageBackground>
   );
